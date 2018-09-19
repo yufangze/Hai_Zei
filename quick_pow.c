@@ -5,9 +5,9 @@
 	> Created Time: 2018年09月18日 星期二 17时08分00秒
  ************************************************************************/
 #include <stdio.h>
-
-int quick_pow(int a, int b) {
-    int r = 1, base = a;
+#include <inttypes.h>
+int64_t quick_pow(int64_t a, int64_t b) {
+    int64_t r = 1, base = a;
     while (b) {
         if (b & 1) r *= base;
         base *= base;
@@ -18,9 +18,9 @@ int quick_pow(int a, int b) {
 
 
 int main() {
-    int a, b;
-    while (scanf("%d%d", &a, &b) != EOF) {
-        printf("%d\n", quick_pow(a, b));
+    int64_t a, b;
+    while (scanf("%ld%ld", &a, &b) != EOF) {
+        printf("%ld\n", quick_pow(a, b));
     }
     return 0;
 }
