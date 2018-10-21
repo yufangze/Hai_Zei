@@ -16,7 +16,7 @@ double f_prime(double x) {
 
 double Newton_sqrt(int n, double (*f)(double, double), double (*f_prime)(double)) {
     double x = 1.0;
-    #define EP 1e-6
+    #define EP 1e-7
     while (fabs(f(x, n)) > EP) {
         x -= f(x, n) / f_prime(x);
     }
