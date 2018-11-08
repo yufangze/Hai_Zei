@@ -25,7 +25,7 @@ hash *init(int n) {
 }
 
 int hashfunc(int val) {
-    return val & 0x3f77777;
+    return val & 0x7fffffff;
 }
 
 void insert(hash *h, int val, int ind) {
